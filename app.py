@@ -1,7 +1,7 @@
 import sys
 
 # Function to find the couples in a list of numbers that sum up a target number
-def app_function(numbers, target):
+def app(numbers, target):
     
     if len(numbers) == 0:
         return []
@@ -31,7 +31,7 @@ if len(sys.argv) > 1:
         lista_de_numeros = [int(numero) for numero in param1.split(',')]
         total_sum = int(param2)
 
-        result = app_function(lista_de_numeros, total_sum)
+        result = app(lista_de_numeros, total_sum)
         print(result)
     else: 
         print([])
