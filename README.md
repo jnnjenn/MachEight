@@ -1,6 +1,5 @@
-<h1>Running the Code</h1>
+:rocket: <h1>Running the Code</h1> :rocket:
 
-:rocket:
 
 To run the code, open a terminal window and navigate to the directory where the code is saved. Then, enter the following command:
 

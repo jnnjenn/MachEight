@@ -1,7 +1,11 @@
 import sys
 
 # Function to find the couples in a list of numbers that sum up a target number
-def app(numbers, target):
+def app_function(numbers, target):
+    
+    if len(numbers) == 0:
+        return []
+
     listCouples = []
 
     for i in range(len(numbers)):
@@ -14,14 +18,20 @@ def app(numbers, target):
     
     return listCouples
 
-# get the first and second command line arguments and store them as strings
-param1 = sys.argv[1]
-param2 = sys.argv[2]
 
-# split the first argument on the comma and convert each number to an integer
-# store the resulting list in a variable called list_of_numbers 
-lista_de_numeros = [int(numero) for numero in param1.split(',')]
-total_sum = int(param2)
+# Validate if some parameters were send by get request
+if len(sys.argv) > 1:
+    # get the first and second command line arguments and store them as strings
+    param1 = sys.argv[1]
+    param2 = sys.argv[2]
 
-result = app(lista_de_numeros, total_sum)
-print(result)
+    if len(param1) > 0 and param1 != ',':
+        # split the first argument on the comma and convert each number to an integer
+        # store the resulting list in a variable called list_of_numbers 
+        lista_de_numeros = [int(numero) for numero in param1.split(',')]
+        total_sum = int(param2)
+
+        result = app_function(lista_de_numeros, total_sum)
+        print(result)
+    else: 
+        print([])
